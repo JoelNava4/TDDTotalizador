@@ -1,4 +1,4 @@
-import { devolverItems,devolverPrecioxItems } from "./calcularPrecio";
+import { devolverItems,devolverPrecioxItems,devolverEstado } from "./calcularPrecio";
 
 describe("Calcular Precio Final De Una Compra", () => {
   it("deberia generar la cantidad de items", () => {
@@ -7,6 +7,10 @@ describe("Calcular Precio Final De Una Compra", () => {
 
   it("deberia generar el precio x item", () => {
     expect(devolverPrecioxItems(3)).toEqual(3);
+  });
+
+  it("deberia generar el estado del cliente", () => {
+    expect(devolverEstado("CA")).toEqual("CA");
   });
 
 });

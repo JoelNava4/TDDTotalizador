@@ -1,3 +1,6 @@
-export function calcularPrecioNeto(numItems){
-    return numItems.toString()
+export function devolverItems(numItems){
+    return numItems
+}
+export function devolverPrecioxItems(precio){
+    return precio
 }

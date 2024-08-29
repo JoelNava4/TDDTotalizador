@@ -1,10 +1,14 @@
 export function devolverItems(numItems){
-    return numItems
+    return numItems;
 }
 export function devolverPrecioxItems(precio){
-    return precio
+    return precio;
 }
 
 export function devolverEstado(estado){
-    return estado
+    return estado;
+}
+
+export function devolverPrecioNeto(numItems,precio){
+    return numItems * precio;
 }

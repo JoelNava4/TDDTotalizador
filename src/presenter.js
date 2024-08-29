@@ -1,4 +1,4 @@
-import { devolverItems,devolverPrecioxItems,devolverEstado } from "./calcularPrecio";
+import { devolverItems,devolverPrecioxItems,devolverEstado,devolverPrecioNeto } from "./calcularPrecio";
 
 const items = document.querySelector("#items-numero");
 const precio = document.querySelector("#precio-item");
@@ -7,6 +7,7 @@ const form = document.querySelector("#calcularPrecio-form");
 const divnumItems = document.querySelector("#numItems-div");
 const divprecioXItem = document.querySelector("#preciItem-div")
 const divestadoCliente = document.querySelector("#estado-div")
+const divprecioNeto = document.querySelector("#precioNeto-div")
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -18,4 +19,5 @@ form.addEventListener("submit", (event) => {
   divnumItems.innerHTML = "<p> Numero de Items: " + devolverItems(numItems) + "</p>";
   divprecioXItem.innerHTML = "<p> Precio por Item: " + devolverPrecioxItems(precioXItem) + "</p>";
   divestadoCliente.innerHTML = "<p> Codigo de Estado: " + devolverEstado(estadoCliente) + "</p>";
+  divprecioNeto.innerHTML = "<p> El Precio Neto es: " + devolverPrecioNeto(numItems,precioXItem) + "</p>";
 });
